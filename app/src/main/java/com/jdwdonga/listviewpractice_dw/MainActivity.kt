@@ -18,10 +18,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mStudentList.add( Student("정동욱", 1989) )
-        mStudentList.add( Student("문슬아", 1990) )
-        mStudentList.add( Student("곽도영", 1985) )
-        mStudentList.add( Student("윤자명", 1977) )
+        mStudentList.add( Student("가길동", 1989, "010-1111-1111") )
+        mStudentList.add( Student("나길동", 1990, "010-2222-2222") )
+        mStudentList.add( Student("다길동", 1985, "010-3333-3333") )
+        mStudentList.add( Student("라길동", 1977, "010-4444-4444") )
+        mStudentList.add( Student("마길동", 1994, "010-5555-5555") )
+        mStudentList.add( Student("바길동", 1989, "010-6666-6666") )
+        mStudentList.add( Student("사길동", 1990, "010-7777-7777") )
+        mStudentList.add( Student("아길동", 1985, "010-8888-8888") )
+        mStudentList.add( Student("자길동", 1994, "010-9999-9999") )
+
 
         mAdapter = studentAdapter(this, R.layout.student_list_item, mStudentList)
 

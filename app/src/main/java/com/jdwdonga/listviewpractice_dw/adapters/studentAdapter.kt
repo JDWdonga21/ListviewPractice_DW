@@ -30,9 +30,15 @@ class studentAdapter(
 
         val nameTxt = row.findViewById<TextView>(R.id.nameTxt)
         val birthYear = row.findViewById<TextView>(R.id.birthYear)
+        // 년도 가져오는 알고리즘 구해서 적용하기
+        val korAge = 2022 - studentData.birthYear + 1
+
+        val phoneNum = row.findViewById<TextView>(R.id.phoneNumbers)
 
         nameTxt.text = studentData.name
-        birthYear.text = "(${studentData.birthYear}년생)"
+        birthYear.text = "(${studentData.birthYear}년생), 나이 : ${korAge} 세"
+        phoneNum.text =  "전화번호 : ${studentData.phoneNum}"
+
 
 
         return row
