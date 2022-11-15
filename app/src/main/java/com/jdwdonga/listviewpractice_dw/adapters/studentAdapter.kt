@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import com.jdwdonga.listviewpractice_dw.R
 import com.jdwdonga.listviewpractice_dw.datas.Student
 
@@ -24,6 +25,15 @@ class studentAdapter(
             tempRow = inf.inflate(R.layout.student_list_item, null)
         }
         val row = tempRow!!
+
+        val studentData = mlist[position]
+
+        val nameTxt = row.findViewById<TextView>(R.id.nameTxt)
+        val birthYear = row.findViewById<TextView>(R.id.birthYear)
+
+        nameTxt.text = studentData.name
+        birthYear.text = "(${studentData.birthYear}년생)"
+
 
         return row
     }
